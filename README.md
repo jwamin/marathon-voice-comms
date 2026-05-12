@@ -118,6 +118,26 @@ once in the Stream Deck app and exporting it.
 - **Windows-only for keystroke delivery.** macOS/Linux loads the plugin but
   no-ops the keysender.
 
+## Releases
+
+Tag-driven. Pushing a `v*.*.*` tag triggers
+[`.github/workflows/release.yml`](.github/workflows/release.yml), which builds,
+packs a `.streamDeckPlugin` file, and attaches it to an auto-generated GitHub
+Release.
+
+```sh
+# bump manifest Version in com.jossy.marathon.sdPlugin/manifest.json first,
+# then:
+git tag v0.1.1
+git push origin v0.1.1
+```
+
+The workflow translates `v0.1.1` to the Stream Deck 4-part manifest version
+`0.1.1.0` and packs against it.
+
+Every push/PR to `main` runs [`.github/workflows/build.yml`](.github/workflows/build.yml)
+which builds and validates the manifest — no packing.
+
 ## License
 
 TBD.
