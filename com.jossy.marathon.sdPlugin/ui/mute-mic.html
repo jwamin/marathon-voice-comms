@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Mute Mic Settings</title>
+    <meta charset="utf-8" />
+    <script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+</head>
+<body>
+    <sdpi-item label="Toggle Key">
+        <sdpi-textfield setting="key" placeholder="m" default="m"></sdpi-textfield>
+    </sdpi-item>
+    <sdpi-item>
+        <small>
+            Bind this same key in <b>Marathon &rarr; Settings &rarr; Audio &rarr; Mute Self</b>.
+            Examples: <code>m</code>, <code>f14</code>, <code>ctrl+m</code>. The button tracks its own
+            on/off state &mdash; if it drifts out of sync with the game, tap it once to resync.
+        </small>
+    </sdpi-item>
+</body>
+</html>

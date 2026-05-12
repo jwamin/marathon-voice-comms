@@ -1,0 +1,97 @@
+{
+	"Name": "Marathon Voice Comms",
+	"Version": "0.1.0.0",
+	"Author": "Jossy",
+	"Description": "Voice-chat controls for Marathon: push-to-talk, mute mic, and deafen. Sends configurable keystrokes to the game.",
+	"Category": "Marathon Voice Comms",
+	"CategoryIcon": "imgs/plugin/category-icon",
+	"Icon": "imgs/plugin/marketplace",
+	"CodePath": "bin/plugin.js",
+	"SDKVersion": 3,
+	"Software": {
+		"MinimumVersion": "7.1"
+	},
+	"OS": [
+		{
+			"Platform": "windows",
+			"MinimumVersion": "10"
+		},
+		{
+			"Platform": "mac",
+			"MinimumVersion": "12"
+		}
+	],
+	"Nodejs": {
+		"Version": "24",
+		"Debug": "enabled"
+	},
+	"UUID": "com.jossy.marathon",
+	"Actions": [
+		{
+			"Name": "Push To Talk",
+			"UUID": "com.jossy.marathon.ptt",
+			"Icon": "imgs/actions/ptt/icon",
+			"Tooltip": "Hold to transmit. Sends a configurable key down on press, key up on release.",
+			"PropertyInspectorPath": "ui/ptt.html",
+			"Controllers": ["Keypad"],
+			"States": [
+				{
+					"Image": "imgs/actions/ptt/key",
+					"TitleAlignment": "bottom",
+					"FontStyle": "Bold",
+					"FontSize": 10
+				},
+				{
+					"Image": "imgs/actions/ptt/key-active",
+					"TitleAlignment": "bottom",
+					"FontStyle": "Bold",
+					"FontSize": 10
+				}
+			]
+		},
+		{
+			"Name": "Mute Mic",
+			"UUID": "com.jossy.marathon.mute-mic",
+			"Icon": "imgs/actions/mute-mic/icon",
+			"Tooltip": "Toggle your microphone in Marathon. Sends a configurable key tap.",
+			"PropertyInspectorPath": "ui/mute-mic.html",
+			"Controllers": ["Keypad"],
+			"States": [
+				{
+					"Image": "imgs/actions/mute-mic/key",
+					"TitleAlignment": "bottom",
+					"FontStyle": "Bold",
+					"FontSize": 10
+				},
+				{
+					"Image": "imgs/actions/mute-mic/key-muted",
+					"TitleAlignment": "bottom",
+					"FontStyle": "Bold",
+					"FontSize": 10
+				}
+			]
+		},
+		{
+			"Name": "Mute Others",
+			"UUID": "com.jossy.marathon.mute-others",
+			"Icon": "imgs/actions/mute-others/icon",
+			"Tooltip": "Toggle incoming voice (deafen) in Marathon. Sends a configurable key tap.",
+			"PropertyInspectorPath": "ui/mute-others.html",
+			"Controllers": ["Keypad"],
+			"States": [
+				{
+					"Image": "imgs/actions/mute-others/key",
+					"TitleAlignment": "bottom",
+					"FontStyle": "Bold",
+					"FontSize": 10
+				},
+				{
+					"Image": "imgs/actions/mute-others/key-muted",
+					"TitleAlignment": "bottom",
+					"FontStyle": "Bold",
+					"FontSize": 10
+				}
+			]
+		}
+	]
+}
