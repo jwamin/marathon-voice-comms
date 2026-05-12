@@ -26,6 +26,15 @@
 		"Debug": "enabled"
 	},
 	"UUID": "com.jossy.marathon",
+	"Profiles": [
+		{
+			"Name": "profiles/Marathon",
+			"DeviceType": 9,
+			"AutoInstall": true,
+			"Readonly": false,
+			"DontAutoSwitchWhenInstalled": false
+		}
+	],
 	"Actions": [
 		{
 			"Name": "Push To Talk",

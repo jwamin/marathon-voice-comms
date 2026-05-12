@@ -1,44 +1,26 @@
 # Bundled profiles
 
-Drop exported `.streamDeckProfile` files in this directory, then add a matching
-entry to `manifest.json` under `"Profiles"`. Stream Deck rejects manifests that
-reference missing profile files, so add the manifest entry **after** the file
-exists.
+`.streamDeckProfile` files in this directory ship inside the plugin and are
+referenced from `../manifest.json` under `"Profiles"`. With `AutoInstall: true`,
+Stream Deck installs the profile the first time the plugin loads on a matching
+device.
 
-## To create the default Neo layout
+## Currently bundled
 
-1. Launch Stream Deck. Open the Marathon Voice Comms plugin's actions.
-2. Create a new profile (Preferences -> Profiles -> +) named **Marathon Neo**.
-3. Drag the three actions onto the bottom row, left-aligned:
+| File                          | DeviceType | Device           |
+| ----------------------------- | ---------- | ---------------- |
+| `Marathon.streamDeckProfile`  | 9          | Stream Deck Neo  |
 
-   ```
-   [ ] [ ] [ ] [ ]
-   [PTT][MIC][OTH][ ]
-   ```
+## Adding another device's layout
 
-4. Right-click the profile in Preferences -> Profiles -> **Export**.
-5. Save as `marathon-neo.streamDeckProfile` in this folder.
+1. In Stream Deck, switch to the target device.
+2. Create a new profile, place the three actions where you want them.
+3. Right-click the profile in Preferences -> Profiles -> **Export**.
+4. Save the `.streamDeckProfile` file into this folder.
+5. Add a matching entry to `../manifest.json` under `"Profiles"`. DeviceType
+   integers: 0 = MK.2/Original, 1 = Mini, 2 = XL, 7 = Stream Deck +, 9 = Neo,
+   13 = Stream Deck + XL.
+6. Re-validate: `npx streamdeck validate ./com.jossy.marathon.sdPlugin`.
 
-## Activate the manifest entry
-
-Once `marathon-neo.streamDeckProfile` is in this folder, add to `manifest.json`
-(top level, after `"UUID"`):
-
-```json
-"Profiles": [
-    {
-        "Name": "profiles/marathon-neo",
-        "DeviceType": 9,
-        "AutoInstall": true,
-        "Readonly": false,
-        "DontAutoSwitchWhenInstalled": false
-    }
-],
-```
-
-`DeviceType` 9 is Stream Deck Neo. For other devices: 0 = MK.2/Original, 1 =
-Mini, 2 = XL, 7 = Stream Deck +. To ship multiple devices, export one profile
-per device type and add additional entries.
-
-Then run `npx streamdeck validate ./com.jossy.marathon.sdPlugin` to confirm the
-plugin still loads cleanly.
+Stream Deck rejects manifests that reference missing profile files, so add the
+manifest entry **after** the file is in place.
