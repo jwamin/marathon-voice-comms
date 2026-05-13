@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <title>Decorative Button Settings</title>
+    <meta charset="utf-8" />
+    <script src="https://sdpi-components.dev/releases/v4/sdpi-components.js"></script>
+</head>
+<body>
+    <sdpi-item label="Design">
+        <sdpi-select setting="design" default="marathon">
+            <option value="marathon">Marathon</option>
+            <option value="cyberacme">CyberAcme</option>
+            <option value="mida">Mida</option>
+            <option value="traxus">Traxus</option>
+        </sdpi-select>
+    </sdpi-item>
+    <sdpi-item label="Hotkey (optional)">
+        <sdpi-textfield setting="key" placeholder="e.g. f13, ctrl+shift+v"></sdpi-textfield>
+    </sdpi-item>
+    <sdpi-item>
+        <small>
+            Tap inverts the button's fill (foreground &harr; background). If a
+            hotkey is set it's also sent on every tap, so you can wire the
+            button to a quick chat, ping, or any in-game shortcut. Leave the
+            hotkey blank to make the button purely decorative.
+        </small>
+    </sdpi-item>
+</body>
+</html>

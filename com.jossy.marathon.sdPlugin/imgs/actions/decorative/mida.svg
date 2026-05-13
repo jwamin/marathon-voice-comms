@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 144 144" width="144" height="144">
+  <rect width="144" height="144" fill="#0A0807"/>
+  <g fill="none" stroke="#22E1FF" stroke-width="6" stroke-linejoin="miter">
+    <path d="M 72 28 L 122 112 L 22 112 Z"/>
+  </g>
+  <g fill="none" stroke="#22E1FF" stroke-width="3" stroke-linecap="square">
+    <line x1="10" y1="86" x2="134" y2="86"/>
+    <line x1="38" y1="68" x2="106" y2="68"/>
+  </g>
+  <circle cx="72" cy="86" r="5" fill="#22E1FF"/>
+  <g stroke="#22E1FF" stroke-width="2.5" fill="none" stroke-linecap="square" opacity="0.5">
+    <path d="M 10 22 L 10 10 L 22 10"/>
+    <path d="M 122 10 L 134 10 L 134 22"/>
+    <path d="M 10 122 L 10 134 L 22 134"/>
+    <path d="M 122 134 L 134 134 L 134 122"/>
+  </g>
+</svg>

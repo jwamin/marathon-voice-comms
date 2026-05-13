@@ -6,13 +6,13 @@
     </linearGradient>
   </defs>
   <rect width="144" height="144" fill="url(#bg)"/>
-  <g stroke="#5C2410" stroke-width="3" fill="none" stroke-linecap="square">
+  <g stroke="#3D4D14" stroke-width="3" fill="none" stroke-linecap="square">
     <path d="M 10 24 L 10 10 L 24 10"/>
     <path d="M 120 10 L 134 10 L 134 24"/>
     <path d="M 10 120 L 10 134 L 24 134"/>
     <path d="M 120 134 L 134 134 L 134 120"/>
   </g>
-  <g transform="translate(72 64)" fill="none" stroke="#5C2410" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
+  <g transform="translate(72 64)" fill="none" stroke="#3D4D14" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" opacity="0.85">
     <rect x="-14" y="-30" width="28" height="44" rx="14"/>
     <path d="M -24 10 a 24 24 0 0 0 48 0"/>
     <line x1="0" y1="34" x2="0" y2="46"/>

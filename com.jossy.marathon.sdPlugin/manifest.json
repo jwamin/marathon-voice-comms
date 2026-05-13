@@ -101,6 +101,22 @@
 					"FontSize": 10
 				}
 			]
+		},
+		{
+			"Name": "Marathon Decoration",
+			"UUID": "com.jossy.marathon.decorative",
+			"Icon": "imgs/actions/decorative/icon",
+			"Tooltip": "Decorative Marathon / faction button. Tap inverts the fill; optionally sends a configurable hotkey.",
+			"PropertyInspectorPath": "ui/decorative.html",
+			"Controllers": ["Keypad"],
+			"States": [
+				{
+					"Image": "imgs/actions/decorative/marathon",
+					"TitleAlignment": "bottom",
+					"FontStyle": "Bold",
+					"FontSize": 10
+				}
+			]
 		}
 	]
 }
